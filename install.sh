@@ -8,7 +8,7 @@ sudo apt-get clean
 # Install dependencies
 echo "=========== Installing dependencies ============"
 apt-get update
-apt-get install -y git wget cmake libmcrypt-dev libreadline-dev libzmq-dev
+apt-get install -y git wget cmake libmcrypt-dev libreadline-dev libzmq-dev 
 apt-get install libxml2-dev     \
                 libjpeg-dev     \
                 libpng-dev      \
@@ -17,7 +17,7 @@ apt-get install libxml2-dev     \
                 libpcre3-dev    \
                 libbz2-dev      \
                 libcurl4-openssl-dev    \
-		libminiupnpc-dev\
+                libminiupnpc-dev\
                 libdb5.1-dev    \
                 libpng12-dev    \
                 libxpm-dev      \
@@ -32,9 +32,9 @@ apt-get install libxml2-dev     \
                 libpspell-dev   \
                 libsnmp-dev     \
                 libxslt1-dev    \
-                libmcrypt-dev   
+                libmcrypt-dev
 apt-get install php5-dev
-
+	
 # Install libmemcached
 echo "========== Installing libmemcached =========="
 wget https://launchpad.net/libmemcached/1.0/1.0.18/+download/libmemcached-1.0.18.tar.gz
@@ -57,15 +57,9 @@ git clone git://github.com/php-build/php-build.git $HOME/php-build
 $HOME/php-build/install.sh
 rm -rf $HOME/php-build
 
-# Install phpunit
-echo "============ Installing PHPUnit ============="
-wget https://phar.phpunit.de/phpunit.phar
-chmod +x phpunit.phar
-mv phpunit.phar /usr/local/bin/phpunit
-
 # Activate phpenv
-echo "============ Activate phpenv ============="
 export PATH=$HOME/.phpenv/bin:$PATH
+echo " 51 PATH=$HOME/.phpenv/bin:$PATH"
 eval "$(phpenv init -)"
 
 #Download pickle 
